@@ -57,6 +57,31 @@ Now let's get back to where we were, hooks!
 <i><b>Note: This is an oversimplified version of what happens under the hood, React doesn't use this to power their library.
 </b></i>
 
+ ```
+ let React = (function() {
+  let global = {}; // define a global variable where we store information about the component
+  let index = 0; // index to keep track of the component's state
+  function render(Component) {
+    global.Component = Component;
+    const instance = Component(); // get the instance of the component
+    index = 0;
+    instance.render();
+    global.instance = instance; // store the component's instance for any future calls of the component's functions
+    return global; // return the global variable
+  }
+
+  function useState(initialState) {
+    // implement useState
+  }
+
+  function useEffect(cb, deps) {
+    // implement useEffect
+  }
+
+  return { render, useState, useEffect };
+})();
+```
+
 Let's break down the code once before we move forward. 
   
   <b>Step 1:</b> We define a global object to keep track of the component's properties. 
