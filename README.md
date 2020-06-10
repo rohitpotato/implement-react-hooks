@@ -153,7 +153,7 @@ function useEffect(cb, deps) {
   React uses ```Object.is()``` under the hood to compare values. 
   For any further useEffect functions inside our component, we increment the index so it can store its own dependencies at the next index in the hooks array.
 
-  Now, let's write a basic React Component, we will monitor the value of global.hooks and index at each step.
+  Now, let's write a basic React Component, we will monitor the value of ```global.hooks``` and ```index``` at each step.
 
 
 
