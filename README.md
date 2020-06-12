@@ -1,6 +1,9 @@
 # implement-react-hooks
 A simplified implementation of two of the most important react hooks - useState and useEffect
 
+### Original Article: 
+https://medium.com/swlh/learn-by-implementing-reacts-usestate-and-useeffect-a-simplified-overview-ea8126705a88
+
 # Learn by implementing React's useState and useEffect - A simplified overview
 
 Although React hooks were first introduced back in 2018, I started using them not too long ago.
